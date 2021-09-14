@@ -1,0 +1,15 @@
+{
+    "read_checkpoint_1": 352,
+    "repeat:note_packets": {
+        "type": ["i", 1],
+        "length": ["i", 1],
+        "prev_length": ["i", 1],
+        "id": ["i", 1],
+        "note_key_tree": ["key_tree", "length-16"]
+    },
+    "requirements:generic_file_header":
+    {
+        "file_type_guid": [-905246832, 298899349,-1610599761, -1521198300],
+        "file_schema": 3
+    }
+}

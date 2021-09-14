@@ -1,0 +1,29 @@
+{
+    "read_checkpoint_1": 352,
+    "raw_data_file_header": 
+    {
+        "sample_freq": ["d",1],
+        "num_channels": ["i", 1],
+        "deltabits": ["i", 1],
+        "phys_chan": ["i", 1024],
+        "headbox_type": ["i", 4],
+        "headbox_sn": ["i", 4],
+        "headbox_sw_version": ["string", 40],
+        "dsp_hw_version": ["string", 10],
+        "dsp_sw_version": ["string", 10],
+        "discardbits": ["i", 1],
+        "shorted": ["h", 1024],
+        "frequency_factor": ["h", 1024]
+    },
+    "read_checkpoint_2": 8656,
+    "special:data_packets": "data_packets",
+    "requirements:generic_file_header":
+    {
+        "file_type_guid": [-905246832, 298899349,-1610599761, -1521198300],
+        "file_schema": 9
+    },
+    "requirements:raw_data_file_header":
+    {
+        "deltabits": 8
+    }
+}

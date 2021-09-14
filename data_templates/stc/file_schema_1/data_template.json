@@ -1,0 +1,21 @@
+{
+    "read_checkpoint_1": 352,
+    "stc_file_header": {
+        "sampling_freq": ["i", 1],
+        "num_channels": ["i", 1],
+        "padding": ["i", 12]
+    },
+    "read_checkpoint_2": 408,
+    "repeat:segment_table_of_content": {
+        "segment_name": ["string", 256],
+        "start_stamp": ["i", 1],
+        "end_stamp": ["i", 1],
+        "sample_num": ["i", 1],
+        "sample_span": ["i", 1]
+    },
+    "requirements:generic_file_header":
+    {
+        "file_type_guid": [-373878152, 1297721419, 1913685951, -1648510833],
+        "file_schema": 1
+    }
+}

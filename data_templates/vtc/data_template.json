@@ -1,0 +1,12 @@
+{
+    "video_toc_header": {
+        "vtc_guid": ["i", 4],
+        "schema": ["i", 1]
+    },
+    "repeat:video_toc_entry": {
+        "video_filename": ["string", 261],
+        "guid_location": ["i", 4],
+        "filetime_starttime": ["l", 1],
+        "filetime_endtime": ["l", 1]
+    }
+}

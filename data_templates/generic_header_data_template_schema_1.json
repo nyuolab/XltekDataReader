@@ -1,0 +1,19 @@
+{
+    "generic_file_header":
+    {   
+        "file_type_guid": ["i", 4],
+        "file_schema": ["h", 1],
+        "base_schema": ["h", 1],
+        "eeg_creation_time": ["I", 1],
+        "internal_patient_id": ["i", 1],
+        "study_id": ["i", 1],
+        "patient_last_name": ["string", 80],
+        "patient_first_name": ["string", 80],
+        "patient_middle_name": ["string", 80],
+        "patient_id": ["string", 80]
+    },
+    "requirements:generic_file_header":
+    {
+        "base_schema": 1
+    }
+}

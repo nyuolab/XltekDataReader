@@ -1,0 +1,9 @@
+{  
+    "read_checkpoint": 352,
+    "study_info": ["key_tree", -1, 0],
+    "requirements:generic_file_header":
+    {
+        "file_type_guid": [-905246832, 298899349,-1610599761, -1521198300],
+        "file_schema": 3
+    }
+}

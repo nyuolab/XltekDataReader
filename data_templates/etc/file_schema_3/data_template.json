@@ -1,0 +1,14 @@
+{
+    "read_checkpoint_1": 352,
+    "repeat:table_of_content": {
+        "offset": ["i", 1],
+        "samplestamp": ["i", 1],
+        "sample_num": ["i", 1],
+        "sample_span": ["i", 1]
+    },
+    "requirements:generic_file_header":
+    {
+        "file_type_guid": [-905246832, 298899349,-1610599761, -1521198300],
+        "file_schema": 3
+    }
+}

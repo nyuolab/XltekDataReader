@@ -1,0 +1,276 @@
+{
+    "headbox_name": {
+        "headbox_type==1": "'EEG32'",
+        "headbox_type==3": "'EEG128'",
+        "headbox_type==6": "'EMU36'",
+        "headbox_type==4": "'AMB28'",
+        "headbox_type==5": "'HYPPO'",
+        "headbox_type==14": "'Connex'",
+        "headbox_type==15": "'Trex'",
+        "headbox_type==17": "'EMU40'",
+        "headbox_type==19": "'EEG32U'",
+        "headbox_type==20": "'Quantum'",
+        "headbox_type==21": "'NeuroLink IP'",
+        "headbox_type==22": "'Netlink'",
+        "headbox_type==23": "'Traveler'"
+    },
+
+    "channel_names": {
+        "headbox_type==1 or headbox_type==19": [
+            "[",
+                "'C3', 'C4', 'CZ', 'F3', 'F4',",
+                "'F7','F8', 'FZ', 'FP1', 'FP2',",
+                "'FPZ', 'O1', 'O2', 'P3', 'P4',",
+                "'PZ', 'T3', 'T4', 'T5', 'T6',",
+            "] + [",
+                "'AUX{}'.format(i+1) for i in range(8)",
+            "] + [",
+                "'PG1', 'PG2','A1', 'A2'",
+            "]"
+        ],
+        "headbox_type==3": [
+            "[",
+                "'C{}'.format(i+1) for i in range(128)",
+            "] + [",
+                "OSAT, PR",
+            "] + [",
+                "'C{}'.format(i+131) for i in range(126)",
+            "]"
+        ],
+        "headbox_type==6": [
+            "[",
+                "'AC1', 'AC2', 'Ref', 'Fp1', 'F7', 'T3', 'T5',",
+                "'O1', 'F3', 'C3', 'P3', 'Fz', 'Cz', 'Pz',",
+                "'F4', 'C4', 'P4', 'Fp2', 'F8', 'T4', 'T6', O2",
+            "] + [",
+                "'AC{}'.format(23+i) for i in range(10)",
+            "] + [",
+                "'DC1', 'DC2', 'DC3', 'DC4'",
+            "]"
+        ],
+        "headbox_type==4": [
+            "[",
+                "'AC1', 'AC2', 'Ref', 'Fp1', 'F7', 'T3', 'T5',",
+                "'O1', 'F3', 'C3', 'P3', 'Fz', 'Cz', 'Pz',",
+                "'F4', 'C4', 'P4', 'Fp2', 'F8', 'T4', 'T6',",
+                "'O2'",
+            "] + [",
+                "'AC23', 'AC24'",
+            "] + [",
+                "'DC1', 'DC2', 'DC3', 'DC4'",
+            "]"
+        ],
+        "headbox_type==8": [
+            "[",
+                "'Ref', 'Fp1', 'F7', 'T3', 'A1', 'T5', 'O1',",
+                "'F3', 'C3', 'P3',",
+                "'Fpz', 'Fz', 'Cz', 'Pz',",
+                "'Fp2', 'F8', 'T4', 'A2', 'T6',",
+                "'O2', 'F4', 'C4', 'P4'",
+            "] + [",
+                "'X1', 'X2'",
+            "]"
+        ],
+        "headbox_type==9": [
+            "[",
+                "'Ref', 'Fp1', 'F7', 'T3', 'A1', 'T5', 'O1',",
+                "'F3', 'C3', 'P3',",
+                "'Fpz', 'Fz', 'Cz', 'Pz',",
+                "'Fp2', 'F8', 'T4', 'A2', 'T6',",
+                "'O2', 'F4', 'C4', 'P4'",
+            "] + [",
+                "'X{}'.format(i+1) for i in range(10)",
+            "]"
+        ],
+        "headbox_type==5": [
+            "[",
+                "'C3', 'C4', 'O1', 'O2',",
+                "'A1', 'A2', 'LOC', 'ROC',",
+                "'CHIN1', 'CHIN2', 'ECGL', 'ECGR',",
+                "'LAT1', 'RAT1', 'LAT2', 'RAT2'",
+            "] + [",
+                "'X{}'.format(i+1) for i in range(10)",
+            "] + [",
+                "'CHEST', 'ABD', 'FLOW', 'SNORE',",
+                "'DIF1', 'DIF2', 'POSITION', 'PRES'",
+            "] + [",
+                "'DC{}'.format(i+1) for i in range(6)",
+            "] + [",
+                "'OSAT', 'PR'",
+            "]"
+        ],
+        "headbox_type==14": [
+            "[",
+                "'C3', 'C4', 'O1', 'O2',",
+                "'A1', 'A2', 'Cz', 'F3',",
+                "'F4', 'F7', 'F8', 'Fz',",
+                "'Fp1', 'Fp2', 'Fpz',",
+                "'P3', 'P4', 'Pz',",
+                "'T3', 'T4', 'T5', 'T6',",
+                "'CHIN1', 'CHIN2', 'ECGL', 'ECGR',",
+                "'LAT1', 'LAT2', 'RAT1', 'RAT2'",
+                "'CHEST', 'ABD', 'FLOW', 'SNORE',",
+                "'DIF5', 'DIF6', 'POS'",
+            "] + [",
+                "'DC{}'.format(i+2) for i in range(9)",
+            "] + [",
+                "'OSAT', 'PR'",
+            "]"
+        ],
+        "headbox_type==15": [
+            "[",
+                "'Fp1', 'F7', 'T3', 'A1', 'T5', 'O1',",
+                "'F3', 'C3', 'P3',",
+                "'Fpz', 'Fz', 'Cz', 'Pz',",
+                "'Fp2', 'F8', 'T4', 'A2', 'T6',",
+                "'O2', 'F4', 'C4', 'P4'",
+            "] + [",
+                "'X1', 'X2'",
+            "] + [",
+                "'DIF1', 'DIF2', 'DIF3', 'DIF4'",
+            "] + [",
+                "'DC1', 'DC2', 'DC3', 'DC4'",
+            "] + [",
+                "'OSAT', 'PR'",
+            "]"
+        ],
+        "headbox_type==17": [
+            "[",
+                "'Fp1', 'F7', 'T3', 'T5', 'O1',",
+                "'F3', 'C3', 'P3', 'A1',",
+                "'Fz', 'Cz', 'Fpz', 'Pz'",
+            "] + [",
+                "'X{}'.format(i+1) for i in range(9)",
+            "] + [",
+                "'Fp2', 'X10', 'F8', 'X11', 'T4',",
+                "'X12', 'T6', 'X13', 'O2', 'X14',",
+                "'F4', 'X15', 'C4', 'X16', 'P4',",
+                "'X17', 'A2', 'X18',",
+                "'DC1', 'DC2', 'DC3', 'DC4'",
+                "'OSAT', 'PR'",
+            "]"
+        ],
+        "headbox_type==20": {
+            "num_channels==276": [
+                "[",
+                    "'C{}'.format(i+1) for i in range(256)",
+                "] + [",
+                    "'DC{}'.format(i+1) for i in range(16)",
+                "] + [",
+                    "'TRIG', 'OSAT', 'PR', 'Pleth'",
+                "]"
+            ],
+            "num_channels==532": [
+                "[",
+                    "'C{}'.format(i+1) for i in range(512)",
+                "] + [",
+                    "'DC{}'.format(i+1) for i in range(16)",
+                "] + [",
+                    "'TRIG', 'OSAT', 'PR', 'Pleth'",
+                "]"
+            ]
+        },
+        "headbox_type==21": [
+            "[",
+                "'C{}'.format(i+1) for i in range(128)",
+            "] + [",
+                "'PR', 'OSAT'",
+            "] + [",
+                "'C{}'.format(i+131) for i in range(256-131+1)",
+            "]"
+        ],
+        "headbox_type==22": [
+            "[",
+                "'Fp1', 'Fp2', 'F7', 'F3', 'Fz', 'F4', 'F8',",
+                "'T3', 'C3', 'Cz', 'C4', 'T4', 'T5',",
+                "'P3', 'Pz', 'P4', 'T6', 'O1', 'O2',",
+                "'A1', 'A2', 'Pg1', 'Pg2', 'Oz'",
+            "] + [",
+                "'X{}'.format(i+1) for i in range(8)",
+            "] + [",
+                "'DC{}'.format(i+1) for i in range(8)",
+            "] + [",
+                "'OSAT', 'PR', 'POS'",
+            "]"
+        ],
+        "headbox_type==23": [
+            "[",
+                "'Pg1', 'Pg2', 'Eogl', 'Fp1', 'Fp2',",
+                "'Eogr', 'T1', 'F7', 'F3', 'Fz', 'F4', 'F8',",
+                "'T2', 'A1', 'T3', 'C3', 'Cz', 'C4', 'T4',",
+                "'A2', 'T5', 'P3', 'Pz', 'P4', 'T6', 'O1',",
+                "'Oz', 'O2', 'X1', 'X2', 'X3', 'X4',",
+                "'DC1', 'DC2', 'DC3', 'DC4',",
+                "'OSAT', 'PR', 'POS'",
+            "]"
+        ]
+    },
+
+    "conversion_factors": {
+        "headbox_type==1": "(8711./(2.**21.-0.5))*2.**discardbits",
+        "headbox_type==3": "(8711./(2.**21.-0.5))*2.**discardbits",
+        "headbox_type==6": {
+            "channel<32": "(8711./(2.**21.-0.5))*2.**discardbits",
+            "channel<36": "((5000000./(2**10-0.5))/2**6)*2**discardbits"
+        },
+        "headbox_type==4": {
+            "channel<24": "(8711./(2.**21.-0.5))*2.**discardbits",
+            "channel<28": "((5000000./(2**10-0.5))/2**6)*2**discardbits"
+        },
+        "headbox_type==9": {
+            "channel<33": "(8711./(2.**21.-0.5))*2.**discardbits",
+            "channel<35": "(1/2**6)*2.**discardbits"
+        },
+        "headbox_type==8": {
+            "channel<25": "(8711./(2.**21.-0.5))*2.**discardbits",
+            "channel<27": "(1/2**6)*2.**discardbits"
+        },
+        "headbox_type==5": {
+            "channel<26": "(8711./(2.**21.-0.5))*2.**discardbits",
+            "channel<32": "(8711./(2.**21-0.5))/(159.8/249.5)*2.**discardbit",
+            "channel<40": {
+                "headbox_sw_version<3.4": "((10000000./(2.**10-0.5))/2**6)*2.**discardbit",
+                "headbox_sw_version>=3.4": "((20000000./65536.)/2.**6)*2.**discardbit"
+            },
+            "channel<42": "(1/2**6)*2.**discardbits"
+        },
+        "headbox_type==14": {
+            "channel<38": "(8711./(2.**21.-0.5))*2.**discardbits",
+            "channel<48": "((10800000./65536.)/2**6)*2.**discardbits",
+            "channel<50": "(1/2**6)*2.**discardbits"
+        },
+        "headbox_type==15": {
+            "channel<28": "(8711./(2.**21.-0.5))*2.**discardbits",
+            "channel<32": "((10000000./65536.)/2.**6)*2**discardbits",
+            "channel<34": "(1/2**6)*2.**discardbits"
+        },
+        "headbox_type==17": {
+            "channel<40": "(8711./(2.**21.-0.5))*2.**discardbits",
+            "channel<44": "((10800000./65536.)/2**6)*2.**discardbits",
+            "channel<46": "(1/2**6)*2.**discardbits"
+        },
+        "headbox_type==19": "(8711./(2.**21.-0.5))*2.**discardbits",
+        "headbox_type==20": {
+            "channel<num_channels-22": "(-8711./(2.**21.-0.5))*2.**discardbits",
+            "channel<num_channels-4": "((-10800000./65536.)/2**6)*2.**discardbits",
+            "channel<num_channels": "(1/2**6)*2.**discardbits"
+        },
+        "headbox_type==21": {
+            "channel<128": "(8711./(2.**21.-0.5))*2.**discardbits",
+            "channel<130": "(1/2**6)*2.**discardbits",
+            "channel<256": "(8711./(2.**21.-0.5))*2.**discardbits"
+        },
+        "headbox_type==22": {
+            "channel<32": "(8711./(2.**21.-0.5))*2.**discardbits",
+            "channel<40": "((10800000./65536.)/2**6)*2.**discardbits",
+            "channel<42": "(1/2**6)*2.**discardbits",
+            "channel<43": "((10800000./65536.)/2**6)*2.**discardbits"
+        },
+        "headbox_type==23": {
+            "channel<32": "(8711./(2.**21.-0.5))*2.**discardbits",
+            "channel<36": "((10800000./65536.)/2**6)*2.**discardbits",
+            "channel<38": "(1/2**6)*2.**discardbits",
+            "channel<39": "((10800000./65536.)/2**6)*2.**discardbits"
+        }
+    }
+}
